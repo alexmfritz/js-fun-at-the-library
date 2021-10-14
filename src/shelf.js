@@ -1,11 +1,19 @@
 
-function shelfBook(bookName, sciFiShelf) {
-  sciFiShelf.unshift(bookName);
+function shelfBook(book, shelf) {
+  if (book.genre === "sciFi" && shelf.length < 3) {
+    shelf.unshift(book);
+    return shelf;
+  }
 }
 
-function unshelfBook(bookName, sciFiShelf) {
-  sciFiShelf.shift(bookName);
+function unshelfBook(book, shelf) {
+  for (var i = 0; i< shelf.length; i++) {
+    if (book === shelf[i].title) {
+      shelf.splice(i, 1);
+    }
+  }
 }
+
 
 
 module.exports = {
