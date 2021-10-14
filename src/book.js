@@ -19,25 +19,9 @@ function saveReview(review, reviews) {
   }
   return reviews;
 }
-// function saveReview(review, reviews) {
-//   if (reviews.length === 0) {
-//     reviews.push(review);
-//   } else {
-//       for (var i = 0; i < reviews.length; i++) {
-//         if (reviews[i] !== review) {
-//           reviews.push(review);
-//           return reviews;
-//         } else {
-//           return reviews;
-//         }
-//       }
-//     }
-//   };
 
 function calculatePageCount(bookTitle) {
-  var bookTitle = bookTitle;
-  bookPageCount = (bookTitle.length * 20);
-  return bookPageCount;
+  return bookTitle.length * 20;
 };
 
 function writeBook(bookTitle, bookCharacter, book) {
