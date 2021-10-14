@@ -24,15 +24,36 @@ function saveReview(review, reviews) {
         }
       }
     }
+  };
+
+function calculatePageCount(bookTitle) {
+  var bookTitle = bookTitle;
+  bookPageCount = (bookTitle.length * 20);
+  return bookPageCount;
+};
+
+function writeBook(bookTitle, bookCharacter, book) {
+  var book = {
+    title: bookTitle,
+    mainCharacter: bookCharacter,
+    pageCount: calculatePageCount(bookTitle),
+    genre: "fantasy"
   }
+  return book;
+
+};
+function editBook() {
+
+}
+
 
 module.exports = {
   createTitle,
   buildMainCharacter,
   saveReview,
-  // calculatePageCount,
-  // writeBook,
-  // editBook
+  calculatePageCount,
+  writeBook,
+  editBook
 }
 
 // function saveReview(review, reviews) {
