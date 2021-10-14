@@ -40,11 +40,11 @@ function writeBook(bookTitle, bookCharacter, book) {
     genre: "fantasy"
   }
   return book;
-
 };
-function editBook() {
 
-}
+function editBook(book) {
+  return (book.pageCount *= .75);
+};
 
 
 module.exports = {
