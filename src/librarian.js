@@ -11,8 +11,9 @@ class Librarian {
       return `Hello, ${name}!`;
     }
   }
-  findBook(book) {
-    
+  
+  calculateLateFee(fee) {
+    return Math.ceil(fee * .25);
   }
 }
 
