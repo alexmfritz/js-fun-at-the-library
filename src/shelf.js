@@ -15,14 +15,11 @@ function unshelfBook(book, shelf) {
 }
 
 function listTitles(shelf) {
-  var title = ``;
+  var title = [];
   for (var i = 0; i < shelf.length; i++) {
-    if (i === 0) {
-      title += shelf[i].title;
-    } else {
-      title += `, ` + shelf[i].title;
-    }
+    shelf.push(shelf[i].title);
   }
+  titleString = title.join(", ");
   return title;
 }
 

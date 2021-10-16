@@ -11,7 +11,7 @@ class Librarian {
       return `Hello, ${name}!`;
     }
   }
-  
+
   calculateLateFee(fee) {
     return Math.ceil(fee * .25);
   }
